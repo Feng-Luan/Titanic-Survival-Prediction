@@ -48,11 +48,12 @@ Model performance was evaluated using:
 - These findings are consistent with historical patterns, where gender, socioeconomic status, and age influenced survival outcomes.
 
 ## Project Structure
-```text
+```
 Titanic-Survival-Prediction/
 ├── README.md
 ├── titanic_survival_prediction.ipynb
 └── requirements.txt
+```
 
 ## Tools Used
 - Python
