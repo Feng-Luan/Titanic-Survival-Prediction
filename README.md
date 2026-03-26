@@ -1,57 +1,95 @@
 # Titanic Survival Prediction
 
-**Random Forest outperformed Logistic Regression, achieving ROC-AUC of 0.887**
+🚀 **Random Forest outperformed Logistic Regression, achieving ROC-AUC of 0.890**
 
 This project builds and compares machine learning models to predict passenger survival on the Titanic dataset. It demonstrates a complete end-to-end workflow, from data preprocessing to model evaluation and interpretation.
 
-## Project Overview
-This project predicts passenger survival on the Titanic using machine learning models. The goal was to build a simple end-to-end classification pipeline, compare a baseline model with a more advanced model, and interpret the most important predictors of survival.
+---
 
-## Dataset
-The dataset used in this project is the Titanic dataset, which contains passenger-level information such as age, sex, ticket class, fare, and survival outcome.
+## 📊 Project Overview
 
-Target variable:
+The goal of this project is to:
+- Build a baseline classification model
+- Improve performance using a more advanced model
+- Interpret key factors influencing survival
+
+---
+
+## 📁 Dataset
+
+The dataset contains passenger-level information such as:
+- Age
+- Sex
+- Passenger class (Pclass)
+- Fare
+- Embarkation port
+
+**Target variable:**
 - `Survived` (0 = did not survive, 1 = survived)
 
-## Data Preprocessing
-The following preprocessing steps were performed:
-- Removed irrelevant columns: `Name`, `Ticket`, `Cabin`, and `PassengerId`
-- Filled missing values in `Age` using the median
-- Filled missing values in `Embarked` using the mode
-- Converted categorical variables into numeric variables using one-hot encoding
+---
 
-## Methods
-Two classification models were built and compared:
-1. Logistic Regression
-2. Random Forest Classifier
+## 🧹 Data Preprocessing
 
-The dataset was split into training and test sets using an 80/20 split.
+The following steps were applied:
+- Removed irrelevant columns: `Name`, `Ticket`, `Cabin`, `PassengerId`
+- Imputed missing values:
+  - `Age` → median
+  - `Embarked` → mode
+- Converted categorical variables using one-hot encoding
 
-## Evaluation Metrics
+---
+
+## 🤖 Models
+
+Two models were built and compared:
+
+### 1. Logistic Regression (Baseline)
+- Simple and interpretable model
+- Used as a benchmark
+
+### 2. Random Forest (Advanced Model)
+- Captures nonlinear relationships
+- Handles feature interactions automatically
+
+---
+
+## 📈 Evaluation Metrics
+
 Model performance was evaluated using:
 - Accuracy
 - Confusion Matrix
 - ROC-AUC
 
-## Results
+---
 
-### Logistic Regression
-- Accuracy: 0.810
-- ROC-AUC: 0.883
+## 📊 Results
 
-### Random Forest
-- Accuracy: 0.821
-- ROC-AUC: 0.887
+| Model | Accuracy | ROC-AUC |
+|------|---------|--------|
+| Logistic Regression | 0.810 | 0.883 |
+| Random Forest | 0.821 | 0.887 |
 
-## Key Findings
-- Random Forest performed slightly better than Logistic Regression.
-- The most important features in the Random Forest model were:
-  - `Sex_male`
-  - `Fare`
-  - `Age`
-- These findings are consistent with historical patterns, where gender, socioeconomic status, and age influenced survival outcomes.
+👉 **Random Forest showed improved performance, indicating nonlinear relationships in the data.**
 
-## Project Structure
+---
+
+## 🔍 Feature Importance
+
+The most important features identified by the Random Forest model:
+
+- `Sex_male`
+- `Fare`
+- `Age`
+
+These findings align with historical patterns, where:
+- Gender played a major role in survival
+- Socioeconomic status influenced access to resources
+- Age affected survival likelihood
+
+---
+
+## 📂 Project Structure
 ```
 Titanic-Survival-Prediction/
 ├── README.md
@@ -59,19 +97,37 @@ Titanic-Survival-Prediction/
 └── requirements.txt
 ```
 
-## Tools Used
+---
+
+## 🛠 Tools Used
+
 - Python
 - pandas
 - NumPy
 - scikit-learn
 - matplotlib
+- Jupyter Notebook
 
-## Project Takeaway
-This project demonstrates a complete machine learning workflow, including data cleaning, feature engineering, model training, model evaluation, and interpretation.
+---
 
-## Future Improvements
-Possible next steps include:
+## 🎯 Key Takeaways
+
+- Random Forest improved classification performance over Logistic Regression
+- Feature importance helped interpret model behavior
+- The project demonstrates a full machine learning workflow:
+  - Data cleaning
+  - Feature engineering
+  - Model training
+  - Evaluation
+  - Interpretation
+
+---
+
+## 🔮 Future Improvements
+
 - Hyperparameter tuning
 - Cross-validation
-- Trying gradient boosting methods such as XGBoost
-- Using SHAP values for more detailed model interpretation
+- Gradient boosting (XGBoost, LightGBM)
+- SHAP-based model interpretation
+
+---
