@@ -32,12 +32,12 @@ Model performance was evaluated using:
 ## Results
 
 ### Logistic Regression
-- Accuracy: 0.804
-- ROC-AUC: 0.877
+- Accuracy: 0.810
+- ROC-AUC: 0.883
 
 ### Random Forest
 - Accuracy: 0.821
-- ROC-AUC: 0.890
+- ROC-AUC: 0.887
 
 ## Key Findings
 - Random Forest performed slightly better than Logistic Regression.
