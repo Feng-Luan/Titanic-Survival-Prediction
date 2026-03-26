@@ -1,5 +1,9 @@
 # Titanic Survival Prediction
 
+**Random Forest outperformed Logistic Regression, achieving ROC-AUC of 0.887**
+
+This project builds and compares machine learning models to predict passenger survival on the Titanic dataset. It demonstrates a complete end-to-end workflow, from data preprocessing to model evaluation and interpretation.
+
 ## Project Overview
 This project predicts passenger survival on the Titanic using machine learning models. The goal was to build a simple end-to-end classification pipeline, compare a baseline model with a more advanced model, and interpret the most important predictors of survival.
 
